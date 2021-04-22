@@ -1,2 +1,2 @@
 # AdjMatrix_dirGraph
- dirGraph
+ 有向图邻接矩阵的实现

@@ -76,7 +76,7 @@ public:
 Error::Error(const char *mes)
 // 操作结果：由mes构构通用异常对象
 {
-	strcpy(message, mes);				// 复制异常信息
+	strcpy_s(message, mes);				// 复制异常信息
 }
 
 void Error::Show()const

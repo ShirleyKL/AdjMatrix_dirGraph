@@ -1,12 +1,19 @@
-4 
+7 
 A
 B
 C
 D
-6
-A C 9
-B A 7
-B C 3
-C B 6
-D B 2
-D A 3
+E
+F
+G
+10
+A B 3
+A D 6
+A C 2
+B D 2
+B E 4
+C D 1
+C F 3
+D E 1
+E G 3
+F G 4

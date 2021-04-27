@@ -3,6 +3,9 @@
 #include <iostream>
 #include "AdjMatrix_dirGraph.h"
 #include <fstream>
+#include "ShortPath_Dijkstra.h"
+#include "ShortPath_Floyd.h"
+#include "AdjListNetWork.h"
 using namespace std;
 
 int main()
@@ -12,7 +15,8 @@ int main()
 		ifstream file;
 		int n,m,v1,v2,weight;
 		char e1, e2;
-		file.open("test.txt", ios::in);
+		Status state;
+		file.open("test1.txt", ios::in);
 		if (!file)
 			cout << "文件打开失败!" << endl;
 		else
@@ -47,7 +51,10 @@ int main()
 				cout << endl << "9. 深度优先遍历图.";
 				cout << endl << "10. 广度优先遍历图.";
 				cout << endl << "11. 求顶点出度和入度.";
-				cout << endl << "选择功能(1~10): ";
+				cout << endl << "12. 求两点间的最短路径.";
+				cout << endl << "13. 求图中的关键路径.";
+				cout << endl << "0. 退出.";
+				cout << endl << "选择功能(1~13): ";
 				cin >> c;
 				switch (c)
 				{
@@ -112,6 +119,22 @@ int main()
 					cin >> e1;
 					cout << "顶点" << e1 << "的入度为:" << g.GetInNum(e1);
 					cout << "   出度为:" << g.GetOutNum(e1);
+					break;
+				case 12:
+					cout << endl << "请输入两顶点的值:";
+					cin >> e1 >> e2;
+					cout << "迪杰斯特拉算法求最短路径：" << endl;
+					v1 = g.GetIndex(e1);
+					v2 = g.GetIndex(e2);
+					DisplayShortAB_Dij(v1, v2, g);
+					cout << "弗洛伊德算法求最短路径：" << endl;
+					DisplayShortPath_Floyd(v1, v2, g);
+					break;
+				case 13:
+					cout << endl << "图中的关键路径有:" << endl;
+					state=CriticalPath(g);
+					if (state == FAIL) cout << "图中无关键路径" << endl;
+					break;
 				}
 			}
 		}

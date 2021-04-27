@@ -29,5 +29,23 @@
     <ClInclude Include="SeqQueue.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ShortPath_Dijkstra.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkStack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ShortPath_Floyd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AdjListNetWork.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkQueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

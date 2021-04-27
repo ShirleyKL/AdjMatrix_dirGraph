@@ -142,9 +142,15 @@
     <ClCompile Include="main_test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdjListNetWork.h" />
     <ClInclude Include="AdjMatrix_dirGraph.h" />
     <ClInclude Include="Assistance.h" />
+    <ClInclude Include="LinkQueue.h" />
+    <ClInclude Include="LinkStack.h" />
+    <ClInclude Include="Node.h" />
     <ClInclude Include="SeqQueue.h" />
+    <ClInclude Include="ShortPath_Floyd.h" />
+    <ClInclude Include="ShortPath_Dijkstra.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

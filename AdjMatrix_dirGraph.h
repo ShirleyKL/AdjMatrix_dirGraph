@@ -42,11 +42,12 @@ public:
 	Status SetElem(const int &v,const ElemType& e);   //设置顶点的元素值
 	ElemType& GetElem(const int& v)const;  //求顶点的元素值
 	Status &GetTag(const int& v)const;     //求顶点的标志
-	void SetTag(const int& v, Status& state);    //设置顶点的标志
+	void SetTag(const int& v, Status state);    //设置顶点的标志
 	void Display();  //显示有向图的邻接矩阵
 	WeightType& GetInfinity();    
 	int GetOutNum(const ElemType& e)const;      //求顶点的出度
 	int GetInNum(const ElemType& e)const;     //求顶点的入度
+	WeightType& GetWeight(const int& v1, const int& v2)const;  //求顶点v1到顶点v2的有向边的权值
 };
 
 
@@ -444,7 +445,7 @@ Status &AdjMatrixdirGraph<ElemType, WeightType>::GetTag(const int& v)const
 }
 
 template<class ElemType,class WeightType>
-void AdjMatrixdirGraph<ElemType, WeightType>::SetTag(const int& v, Status& state)
+void AdjMatrixdirGraph<ElemType, WeightType>::SetTag(const int& v, Status state)
 //设置标志
 {
 	if (v < 0 || v >= vexNum)
@@ -507,6 +508,13 @@ int AdjMatrixdirGraph<ElemType, WeightType>::GetInNum(const ElemType& e)const
 	return num;
 }
 
+
+template<class ElemType,class WeightType>
+WeightType& AdjMatrixdirGraph<ElemType, WeightType>::GetWeight(const int& v1, const int& v2)const
+//求顶点v1到顶点v2的有向边的权值
+{
+	return arcs[v1][v2];
+}
 
 
 

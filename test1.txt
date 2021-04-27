@@ -1,0 +1,13 @@
+4
+A
+B
+C
+D
+7
+A D 9
+B A 7
+A D 10
+C D 12
+C A 8
+D B 6
+D C 5
